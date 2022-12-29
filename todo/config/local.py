@@ -14,6 +14,8 @@ class Local(Common):
     MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",
 
                    )
+    SECRET_KEY = Common.SECRET_KEY
+    SECRET_KEY = 'ju^&8@6obov+sri544qm+t0wx-^dp5cmc8l*5w*wo^j)(!7+x('
     TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
     NOSE_ARGS = [
         BASE_DIR,
