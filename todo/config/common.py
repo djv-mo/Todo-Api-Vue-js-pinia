@@ -21,6 +21,7 @@ class Common(Configuration):
         'rest_framework',            # utilities for rest apis
         'rest_framework.authtoken',  # token authentication
         'django_filters',
+        "corsheaders",
         # for filtering rest endpoints
 
         # Your apps
@@ -33,6 +34,7 @@ class Common(Configuration):
     MIDDLEWARE = (
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
+        "corsheaders.middleware.CorsMiddleware",
         'django.middleware.common.CommonMiddleware',
         'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -202,3 +204,5 @@ class Common(Configuration):
             'rest_framework.authentication.TokenAuthentication',
         )
     }
+    # cores
+    CORS_ORIGIN_ALLOW_ALL = True

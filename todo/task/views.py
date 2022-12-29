@@ -4,7 +4,7 @@ from .serializers import TaskSerializer
 
 
 class TaskViewSet(
-        viewsets.GenericViewSet):
+        viewsets.ModelViewSet):
     """
     Updates and retrieves user accounts
     """
