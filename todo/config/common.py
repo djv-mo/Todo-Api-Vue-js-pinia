@@ -25,6 +25,7 @@ class Common(Configuration):
 
         # Your apps
         'todo.users',
+        'todo.task',
 
     )
 
