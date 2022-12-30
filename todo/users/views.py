@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny
 from .models import User
 from .permissions import IsUserOrReadOnly
 from .serializers import CreateUserSerializer, UserSerializer
-
+from rest_framework.exceptions import PermissionDenied
 
 class UserViewSet(mixins.RetrieveModelMixin,
                   mixins.UpdateModelMixin,
@@ -24,3 +24,9 @@ class UserCreateViewSet(mixins.CreateModelMixin,
     queryset = User.objects.all()
     serializer_class = CreateUserSerializer
     permission_classes = (AllowAny,)
+
+    def perform_create(self, serializer):
+        if self.request.user.is_authenticated:
+            raise PermissionDenied("You are already authenticated")
+        else:
+            serializer.save()
