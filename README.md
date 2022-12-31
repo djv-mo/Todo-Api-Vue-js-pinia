@@ -46,3 +46,7 @@ run vue development server :
 ```bash
 npm run dev
 ```
+
+![Screenshot of application](https://i.postimg.cc/tggv46fg/Screenshot-from-2022-12-31-22-57-35.png)
+![Screenshot of application](https://i.postimg.cc/9QbN2bLS/Screenshot-from-2022-12-31-22-57-52.png)
+![Screenshot of application](https://i.postimg.cc/qv4ZWSxy/Screenshot-from-2022-12-31-22-58-12.png)
