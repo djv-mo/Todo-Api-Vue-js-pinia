@@ -7,11 +7,12 @@ A Simple yet powerful todo app. Check out the project's [documentation](http://d
 
 # Prerequisites
 
-- [Docker](https://docs.docker.com/docker-for-mac/install/)  
+- [Docker](https://docs.docker.com/docker-for-mac/install/)
 
 # Local Development
 
 Start the dev server for local development:
+
 ```bash
 docker-compose up
 ```
@@ -20,4 +21,28 @@ Run a command inside the docker container:
 
 ```bash
 docker-compose run --rm web [command]
+```
+
+install django requirements :
+
+```bash
+pip install -r requirements.txt
+```
+
+run django development server :
+
+```bash
+python manage.py runserver
+```
+
+install vue pakages :
+
+```bash
+npm install
+```
+
+run vue development server :
+
+```bash
+npm run dev
 ```
